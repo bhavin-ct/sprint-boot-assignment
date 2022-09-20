@@ -13,20 +13,9 @@ import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
 
 @WebMvcTest(AssignmentApplication.class)
 class AssignmentApplicationTests {
-	@Autowired
-	private MockMvc mockMvc;
 
 	@Test
 	void contextLoads() {
-	}
-
-	@Test
-	public void testReverseString() throws Exception {
-		RequestBuilder requestBuilder = MockMvcRequestBuilders.get(
-				"/reverseString?str=Test");
-		mockMvc.perform(requestBuilder)
-				.andExpect(MockMvcResultMatchers.status().isOk())
-				.andExpect(MockMvcResultMatchers.content().string(Matchers.equalTo("tseT")));
 	}
 
 }

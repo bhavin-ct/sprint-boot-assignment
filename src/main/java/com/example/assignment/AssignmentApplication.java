@@ -10,13 +10,6 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class AssignmentApplication {
 
-	@GetMapping("/reverseString")
-	public String reverseString(@RequestParam String str){
-		StringBuilder sb=new StringBuilder(str);
-		sb.reverse();
-		return sb.toString();
-	}
-
 	public static void main(String[] args) {
 		SpringApplication.run(AssignmentApplication.class, args);
 	}
